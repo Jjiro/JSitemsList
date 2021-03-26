@@ -89,3 +89,22 @@ thirdItem.style.color = 'purple'; */
 
 //Query Selector All
 
+var titles = document.querySelectorAll('.title');
+
+console.log(titles);
+titles[0].textContent = 'Hey there!';
+
+var even = document.querySelectorAll('li:nth-child(even)');
+var odd = document.querySelectorAll('li:nth-child(odd)');
+
+for (var i = 0; i < even.length; i++){
+    even[i].style.backgroundColor = 'lightgreen';
+    //odd[i].style.backgroundColor = 'lightgrey';
+}
+
+for (var i = 0; i < odd.length; i++){
+    odd[i].style.backgroundColor = 'lightgrey';
+}
+
+
+
