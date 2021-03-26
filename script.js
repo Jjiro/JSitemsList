@@ -70,5 +70,22 @@ for(var i = 0; i < li.length; i++){
 var header = document.querySelector('#main-header');
 header.style.borderBottom = 'solid 4px #ccc';
 
-var input = document.querySelector('input');
-input.value = 'Hallo!';
+/* var input = document.querySelector('input');
+input.value = 'Hallo!'; */
+
+/* var submit = document.querySelector('button[type="submit"]');
+submit.value = 'SEND';
+
+
+var item = document.querySelector('.list-group-item');
+item.style.color = 'green';
+
+var lastItem = document.querySelector('.list-group-item:last-child');
+lastItem.style.color = 'orange';
+
+var thirdItem = document.querySelector('.list-group-item:nth-child(2)');
+thirdItem.style.color = 'purple'; */
+
+
+//Query Selector All
+
