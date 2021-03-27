@@ -151,6 +151,26 @@ console.log(itemList.previousElementSibling);
 itemList.previousElementSibling.style.color = 'red'; */
 
 
+// Creating Elements //
+var newDiv = document.createElement('div');
+// add class
+newDiv.className = 'hello';
+// add id
+newDiv.id = 'hello 1';
+// add attribute
+newDiv.setAttribute('title', "Hello Divs")
+
+// create text node
+var newDivText = document.createTextNode('Blah blah blah...');
+// append this text to the new div
+newDiv.appendChild(newDivText);
+
+//insert the new div into the DOM
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+container.insertBefore(newDiv, h1);
+
+console.log(newDiv);
 
 
 
