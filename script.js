@@ -152,25 +152,65 @@ itemList.previousElementSibling.style.color = 'red'; */
 
 
 // Creating Elements //
-var newDiv = document.createElement('div');
+/* var newDiv = document.createElement('div');
 // add class
 newDiv.className = 'hello';
 // add id
 newDiv.id = 'hello 1';
 // add attribute
 newDiv.setAttribute('title', "Hello Divs")
-
 // create text node
 var newDivText = document.createTextNode('Blah blah blah...');
 // append this text to the new div
 newDiv.appendChild(newDivText);
 
 //insert the new div into the DOM
-var container = document.querySelector('header .container');
-var h1 = document.querySelector('header h1');
-container.insertBefore(newDiv, h1);
+var container = document.querySelector('header #main-header .container');
+var h1 = document.querySelector('header h1 #header-title');
 
 console.log(newDiv);
+
+newDiv.style.fontSize = "30px";
+
+//container.insertBefore(newDiv, h1);
+*/
+
+
+// EventListeners //
+var button1 = document.getElementById('button').addEventListener('click',function(){
+    //console.log("Clicked button")
+})
+// or using named function
+var button = document.getElementById('button').addEventListener('click',buttonClick)
+
+function buttonClick(e){
+    //console.log('Button Click...')
+    /* document.getElementById('header-title').textContent = 'Changed by click';
+    document.querySelector('#main').style.backgroundColor = '#ccc'; */
+    //console.log(e);
+
+    /* console.log(e.target);
+    console.log(e.target.id);
+    console.log(e.target.className);
+    console.log(e.target.classList);
+    var output = document.getElementById('output');
+    output.innerHTML = '<h4>' + e.target.id + '</h4>'; //show the Id on the DOM */
+
+    /* console.log(e.type);
+    console.log(e.clientX);  //position from the left side of the window/browser
+    console.log(e.clientY); //position from the top side of the window/browser */
+
+    /* console.log(e.offsetX);  //position from the element going left to right
+    console.log(e.offsetY);  //position from the element going top to down */
+
+   /*  //check if keys are press while clicking
+    console.log(e.altKey);
+    console.log(e.crtlKey);
+    console.log(e.shiftKey); */
+
+    
+
+}
 
 
 
