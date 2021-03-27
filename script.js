@@ -47,9 +47,9 @@ for(var i = 0; i < items.length; i++){
     items[i].style.backgroundColor = 'yellow';
 } */
 
-/* 
-var addItemWidth = document.getElementsByClassName('form-control');
-addItemWidth.style.width = '80%'; */
+
+var addItemWidth = document.querySelector('input#item.form-control');
+addItemWidth.style.width = '80%';
 
 
 
@@ -89,7 +89,7 @@ thirdItem.style.color = 'purple'; */
 
 //Query Selector All
 
-var titles = document.querySelectorAll('.title');
+/* var titles = document.querySelectorAll('.title');
 
 console.log(titles);
 titles[0].textContent = 'Hey there!';
@@ -104,7 +104,55 @@ for (var i = 0; i < even.length; i++){
 
 for (var i = 0; i < odd.length; i++){
     odd[i].style.backgroundColor = 'lightgrey';
-}
+} */
+
+
+//Traversing the DOM
+var itemList = document.querySelector('#items');
+
+//parentNode
+/* console.log(itemList.parentNode);
+itemList.parentNode.style.backgroundColor = '#f4f4f4';
+console.log(itemList.parentNode.parentNode); */
+
+//parentElement
+/* console.log(itemList.parentElement);
+itemList.parentElement.style.backgroundColor = 'grey';
+console.log(itemList.parentElement.parentElement); */
+
+//childNode
+//console.log(item.childNode); - this adds complexity to lists(adds text node or white space - before/after each break line)
+/* console.log(itemList.children);
+console.log(itemList.children[2]);
+itemList.children[2].style.backgroundColor = 'pink'; */
+
+//firstChild
+/* console.log(itemList.firstChild); 
+//firstElementChild
+console.log(itemList.firstElementChild);
+itemList.firstElementChild.textContent = 'Tere'; */
+
+//lastChild
+/* console.log(itemList.lastChild); 
+//lastElementChild
+console.log(itemList.lastElementChild);
+itemList.lastElementChild.textContent = 'Privet'; */
+
+//nextSibling
+/* console.log(itemList.nextSibling); 
+//nextElementSibling
+console.log(itemList.nextElementSibling); */
+
+
+//previousSibling
+/* console.log(itemList.previousSibling); 
+//previousElementSibling
+console.log(itemList.previousElementSibling);
+itemList.previousElementSibling.style.color = 'red'; */
+
+
+
+
 
 
 
