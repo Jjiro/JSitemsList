@@ -177,13 +177,13 @@ newDiv.style.fontSize = "30px";
 
 
 // EventListeners //
-var button1 = document.getElementById('button').addEventListener('click',function(){
+/* var button1 = document.getElementById('button').addEventListener('click',function(){
     //console.log("Clicked button")
-})
+}) */
 // or using named function
-var button = document.getElementById('button').addEventListener('click',buttonClick)
+//var button = document.getElementById('button').addEventListener('click',buttonClick)
 
-function buttonClick(e){
+/* function buttonClick(e){
     //console.log('Button Click...')
     /* document.getElementById('header-title').textContent = 'Changed by click';
     document.querySelector('#main').style.backgroundColor = '#ccc'; */
@@ -206,13 +206,12 @@ function buttonClick(e){
    /*  //check if keys are press while clicking
     console.log(e.altKey);
     console.log(e.crtlKey);
-    console.log(e.shiftKey); */
+    console.log(e.shiftKey); */ 
+//};
 
-    
+var button = document.getElementById('button').addEventListener('click',runEvent)
 
+function runEvent(e){
+    console.log('Event Type: ' + e.type)
 }
-
-
-
-
 
