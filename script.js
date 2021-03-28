@@ -49,7 +49,9 @@ for(var i = 0; i < items.length; i++){
 
 
 var addItemWidth = document.querySelector('input#item.form-control');
-addItemWidth.style.width = '80%';
+addItemWidth.style.width = '60%';
+var selectWidth = document.querySelector('select#options');
+selectWidth.style.width = '20%';
 
 
 
@@ -225,17 +227,34 @@ box.addEventListener('mousemove',runEvent);   //  */
 var itemInput = document.querySelector('input[type="text"]');
 var form = document.querySelector('form');
 
-itemInput.addEventListener('keydown', runEvent);
+/* itemInput.addEventListener('keydown', runEvent);
+itemInput.addEventListener('keyup', runEvent);
+itemInput.addEventListener('keypress', runEvent); */
+
+/* itemInput.addEventListener('focus', runEvent);  //click in to focus
+itemInput.addEventListener('blur', runEvent);   //click out to blur */
+
+/* itemInput.addEventListener('cut', runEvent);  
+itemInput.addEventListener('paste', runEvent);  */  
+
+itemInput.addEventListener('input', runEvent); 
+
+select = selectWidth;
+select.addEventListener('change', runEvent);
+form.addEventListener('submit', runEvent);
 
 function runEvent(e){
-    //console.log('Event Type: ' + e.type);
+    e.preventDefault();
+    console.log('Event Type: ' + e.type);
     //output.innerHTML = '<h3>MouseX: '+ e.offsetX + ' </h3><h3>MouseY: '+ e.offsetY + '</h3>';
 
     //box.style.backgroundColor = "rgb("+ e.offsetX +", "+ e.offsetY +", 44 )"; //change  background colour with mousemove
     //document.body.style.backgroundColor = "rgb("+ e.offsetX +", "+ e.offsetY +", 44 )"; //change  background colour with mousemove
 
-    console.log(e.target.value);
+    //console.log(e.target.value);  //get the value
     document.getElementById('output').innerHTML = '<h3>'+e.target.value+'</h3>';
+
+
 
 
 
