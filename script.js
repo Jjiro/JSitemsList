@@ -209,9 +209,38 @@ newDiv.style.fontSize = "30px";
     console.log(e.shiftKey); */ 
 //};
 
-var button = document.getElementById('button').addEventListener('click',runEvent)
+//var button = document.getElementById('button').addEventListener('click',runEvent);
+var button = document.getElementById('button');
+//button.addEventListener('dblclick',runEvent);
+//button.addEventListener('mousedown',runEvent);
+//button.addEventListener('mouseup',runEvent);
+
+var box = document.getElementById('box');
+/* box.addEventListener('mouseenter',runEvent); //fires for the parent element
+box.addEventListener('mouseleave',runEvent);  // ''
+box.addEventListener('mouseover',runEvent);  //fires  for only innerHTML/child element 
+box.addEventListener('mouseout',runEvent);   // ''
+box.addEventListener('mousemove',runEvent);   //  */
+
+var itemInput = document.querySelector('input[type="text"]');
+var form = document.querySelector('form');
+
+itemInput.addEventListener('keydown', runEvent);
 
 function runEvent(e){
-    console.log('Event Type: ' + e.type)
+    //console.log('Event Type: ' + e.type);
+    //output.innerHTML = '<h3>MouseX: '+ e.offsetX + ' </h3><h3>MouseY: '+ e.offsetY + '</h3>';
+
+    //box.style.backgroundColor = "rgb("+ e.offsetX +", "+ e.offsetY +", 44 )"; //change  background colour with mousemove
+    //document.body.style.backgroundColor = "rgb("+ e.offsetX +", "+ e.offsetY +", 44 )"; //change  background colour with mousemove
+
+    console.log(e.target.value);
+    document.getElementById('output').innerHTML = '<h3>'+e.target.value+'</h3>';
+
+
+
+
+
+
 }
 
