@@ -72,8 +72,39 @@ function removeItem(e){
 function editItem(e){
     if(e.target.classList.contains('edit')){
         if(confirm('Do you want to edit this item?')){
-            
+            var eli = e.target.parentElement;
+            var text = eli.getElementsByTagName('span')[0].textContent;
+            ids = eli.id;
+            document.getElementById('item').value = text;
+            var btnNew = document.getElementById('btnAdd');
+            btnNew.innerHTML = 'Edit';
         }
+    }
+}
+var btnNew = document.getElementById('btnAdd');
+btnNew.onclick = function() {
+    if (this.innerHTML == 'Submit') {
+        var inItemText = document.getElementById('item');
+
+        var itemText = inItemText.value;
+        if (!itemText || itemText === "" || itemText === " ") {
+            return false;
+        }
+      form.addEventListener('submit', addItem);
+    } else if (this.innerHTML == 'Edit') {
+      this.innerHTML = 'Submit';
+       var ItemTexts = document.getElementById('item').value;
+             liid = document.getElementById(ids); 
+             liid.getElementsByTagName('span')[0].textContent = ItemTexts;
+            
+            console.log(liid);
+            itemList.appendChild(liid);
+            document.getElementById('item').value = "";
+
+        if (!itemText || itemText === "" || itemText === " ") {
+            return false;
+        }
+        document.getElementById('items').value="";
     }
 }
 
@@ -95,4 +126,12 @@ function filterItems(e){
 } 
 
 
-
+//Box colour changing functions
+var box = document.getElementById('box');
+box.addEventListener('mouseover',runEvent);
+box.addEventListener('mousemove',runEvent);
+function runEvent(e){
+    e.preventDefault();
+    console.log('Event Type: ' + e.type);
+    box.style.backgroundColor = "rgb("+ e.offsetX +", "+ e.offsetY +", 44 )";  
+}
