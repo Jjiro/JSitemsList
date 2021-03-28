@@ -8,3 +8,10 @@
 input .form-control{
     width: 80%;
 } */
+
+#box{
+    width: 500px; 
+    height: 200px; 
+    background: #f4f4f4;
+    text-align: center;
+}
