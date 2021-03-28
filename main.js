@@ -9,6 +9,11 @@ addItemWidth.style.width = '80%';
 var form = document.querySelector('#addForm');
 var itemList = document.querySelector('#items');
 var filter = document.querySelector('#filter');
+var date = new Date();
+var id = "" + date.getMinutes(); + date.getSeconds() + date.getMilliseconds() + "";
+var eli;
+var ids;
+var liid;
 
 
 //form submit event
@@ -20,6 +25,7 @@ itemList.addEventListener('click', removeItem);
 itemList.addEventListener('click', editItem);
 //filter events
 filter.addEventListener('keyup', filterItems);
+
 
 //add items
 function addItem(e){
@@ -57,6 +63,7 @@ function addItem(e){
     return false; //prevent page from refreshing
 }
 
+
 //Delete item
 function removeItem(e){
     if(e.target.classList.contains('delete')){
@@ -81,6 +88,8 @@ function editItem(e){
         }
     }
 }
+
+
 var btnNew = document.getElementById('btnAdd');
 btnNew.onclick = function() {
     if (this.innerHTML == 'Submit') {
@@ -107,6 +116,7 @@ btnNew.onclick = function() {
         document.getElementById('items').value="";
     }
 }
+
 
 //Filter items
 function filterItems(e){
